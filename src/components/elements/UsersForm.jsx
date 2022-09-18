@@ -63,7 +63,7 @@ const UsersForm = ({userList, addNewUser, infoUser, userFormEdit}) => {
 
           <div className='btn__form--cotainer'>
             <button className='btn__save btn-form'>Save</button>
-            <button className='btn__cancel btn-form' onClick={() => userList()}>Cancel</button>
+            <i onClick={() => userList()} class="fa-solid fa-circle-xmark btn__cancel btn-form"></i>
           </div>
         </form>
       </div>
