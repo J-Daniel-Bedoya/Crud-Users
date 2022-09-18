@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Swal from 'sweetalert2';
 import UsersForm from '../elements/UsersForm';
+import '../../assets/css/AlertClass.css'
 
 const useHookForm = () => {
   // Estados
@@ -51,8 +52,10 @@ const useHookForm = () => {
   const sucess = () =>{
     Swal.fire({
       icon: "success",
-      title: "El registro fue exitoso",
-      timer: 4000
+      title: "Registration was successful",
+      timer: 3000,
+      toast: true,
+      backdrop: true
     })
   }
   // Función para seleccinar una card con información 
@@ -77,8 +80,10 @@ const useHookForm = () => {
   const sucessUpdate = () =>{
     Swal.fire({
       icon: "success",
-      title: "La información fue actualizada correctamente",
-      timer: 4000
+      title: "The information was updated correctly",
+      timer: 4000,
+      toast: true,
+      backdrop: true
     })
   }
 
@@ -93,10 +98,10 @@ const useHookForm = () => {
   // Alerta de de pregunta para cuando un usuario desea elimar información
   const confirmDeleteOne = (id) => {
     Swal.fire({
-      title: '¿Quieres elimimar este usuario?',
-      text: 'El usuaio se eliminará definitivamente',
+      title: 'Do you want to delete this user?',
+      text: 'The user will be permanently deleted',
       icon: 'question',
-      footer: '<span>El usuario se eliminara en unos segundos</span>',
+      footer: '<span>He user will be deleted in a few seconds</span>',
       showConfirmButton: true,
       confirmButtonText: "Aceptar",
       showCancelButton: true,
@@ -106,7 +111,7 @@ const useHookForm = () => {
         deleteUser(id)
         Swal.fire({
           icon: "success",
-          title: "Fue eliminado correctamente"          
+          title: "Was removed successfully"          
         })
       }
     })
@@ -122,12 +127,11 @@ const useHookForm = () => {
   // Alerta de de pregunta para cuando un usuario desea elimar toda información
   const confirmDeleteAll = () => {
   Swal.fire({
-    title: '¿Quieres elimimar este usuario?',
-    text: 'Los usuaios se eliminarán definitivamente',
+    title: 'Do you want to remove all users?',
+    text: 'Users will be permanently deleted',
     icon: 'question',
-    footer: '<span>Los usuarios se eliminaran en unos segundos</span>',
+    footer: '<span>Users will be deleted in a few seconds</span>',
     showConfirmButton: true,
-    confirmButtonText: "Aceptar",
     showCancelButton: true,
     cancelButtonText: `Cancel`,
   }).then(res => {
@@ -135,7 +139,7 @@ const useHookForm = () => {
       deleteAllUsers()
       Swal.fire({
         icon: "success",
-        title: "Todos los usuarios fueron eliminados correctamente"          
+        title: "All users were successfully removed"          
       })
     }
   })
@@ -143,12 +147,12 @@ const useHookForm = () => {
   // Alerta para errores que cometa el usuario o errores inesperados
   const errorUnexpected = (newUser) =>{
     Swal.fire({
-      title: "¡Vuelve a intentarlo!",
+      title: "Try it again!",
       icon: "error",
-      text: "La información no ha sido agregada correctamente",
-      footer: "Hay posibilidades de que la API no responda correctamente",
+      text: "The information has not been added correctly",
+      footer: "There are chances that the API is not responding correctly",
       showConfirmButton: true,
-      confirmButtonText: 'Intentar de nuevo',
+      confirmButtonText: 'Try again',
       showCancelButton: true,
       cancelButtonText: 'Cancel'
     }).then((res) =>{

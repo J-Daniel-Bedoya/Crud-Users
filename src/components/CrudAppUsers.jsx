@@ -20,8 +20,8 @@ const CrudAppUsers = () => {
       {
         loading ? (
           <div className='UsersList'>
-            <h1 className='tittle-list'>Users</h1>
-            <button className='btn-add-list' onClick={userForm}><b className='add-user-mas'>+</b> Create new user</button>
+            <h1 className='tittle-list'><i className="fa-solid fa-circle-user"></i>  Users</h1>
+            <button className='btn-add-list' onClick={userForm}><i className="fa-solid fa-user-plus"></i> Create new user</button>
             <div className='container__cards--users'>
               {
                 showInfoCard.map(info => (
@@ -34,7 +34,7 @@ const CrudAppUsers = () => {
                   ))
                 }
             </div>
-            <button className='btn-delete' onClick={confirmDeleteAll}>Delete All</button>
+            <button className='btn-delete' onClick={confirmDeleteAll}><i className="fa-solid fa-users-slash"></i>   Delete All</button>
           </div>
 
         ) : (

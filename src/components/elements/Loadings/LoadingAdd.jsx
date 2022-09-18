@@ -4,7 +4,7 @@ import '../../../assets/css/LoadingAdd.css'
 const LoadingAdd = () => {
   return (
     <div className='loading-add'>
-      <h1>Registrando...</h1>
+      <h1>Logging data...</h1>
     </div>
   );
 };

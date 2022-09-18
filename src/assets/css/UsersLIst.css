@@ -2,10 +2,14 @@
   margin-top: 3%;
   width: 80%;
   height: auto;
-  background-color: rgba(240, 248, 255, 0.215);
+  background-color: #f0f8ff37;
   border-radius: 7px;
   position: relative;
   margin-bottom: .8rem;
+}
+.fa-circle-user{
+  font-size: 1.8rem;
+  color: #ffffff;
 }
 .tittle-list{
   padding: 1.9rem 4.5rem;
@@ -20,25 +24,26 @@
   border-radius: 3px;
   padding: 6px;
   padding-right: 12px;
-  background-color: rgb(64, 64, 200);
+  background-color: #1c1cd9;
   font-size: 17px;
   font-weight: bold;
   cursor: pointer;
-  color: aliceblue;
-  transition: 1s;
+  color: #f0f8ff;
+  transition: .8s;
   animation: mas_scale 1.3s infinite;
 }
 .btn-add-list:hover{
   animation: none;
-  background-color: rgb(8, 3, 112);
+  background-color: #bcbcf9;
   transform: scale(1.07);
+  color: #000;
 }
 
-.add-user-mas{
-  color: aliceblue;
-  font-size: 20px;
-  padding-left: 6px;
-  padding-right: 6px;
+.fa-user-plus{
+  color: #ffffff;
+  font-size: 14px;
+  padding-left: 3px;
+  padding-right: 3px;
   font-weight: bold;
 }
 .container__cards--users{
@@ -55,41 +60,47 @@
   height: 83.8%;
   padding-bottom: 3rem;
   border-radius: 5px 5px;
-  box-shadow: 0 -2px rgb(86, 59, 122);
+  box-shadow: 0 -2px #563b7a;
 }
 .container__cards--users::-webkit-scrollbar{
   border-radius: 20px;
   width: 8px;
-  background-color: rgb(188, 159, 242);
+  background-color: #bc9ff2;
 }
 .container__cards--users::-webkit-scrollbar-thumb{
   border-radius: 20px;
   width: 8px;
-  background-color: rgb(77, 40, 199);
+  background-color: #4d28c7;
 }
 .user-card{
   width: 17rem;
-  height: 12rem;
-  /* border: 1px solid rgb(91, 89, 89); */
-  box-shadow: 0 0 2rem rgb(66, 65, 65);
-  background-color: rgb(241, 240, 240);
-  color: rgb(0, 0, 0);
+  min-height: auto;
+  box-shadow: 0 0 2rem #424141;
+  background-color: #ffffff;
+  color: #000000;
   border-radius: 5px;
   padding: 20px 15px;
   transition: .7s;
   position: relative;
 }
 .user-card:hover{
-  transform: scale(1.07);
+  transform: scale(1.03);
 }
 .barra{
   margin: 13px 0;
   height: .3px;
-  background-color: rgb(140, 136, 136);
+  background-color: #969494;
   border: none;
 }
 .card__name--tittle{
   font-size: 16px;
+  text-align: center;
+}
+.fa-user{
+  padding: 0 3px 0 0;
+}
+.fa-envelope, .birthday-icon{
+  padding: 0 5px;
 }
 .card__email{
   padding: 7px 0 10px 0;
@@ -98,30 +109,33 @@
 }
 .card__birthday{
   font-size: 14px;
-  /* padding-left: 10px; */
   padding: 0 0 10px 10px;
 }
 .btn-trash{
-  position: absolute;
+  position: relative;
+  top: 8px;
+  left: 80px;
   bottom: 6px;
   right: 5rem;
   font-size: 20px;
   padding: 7px 8px;
   border-radius: 5px;
-  color: #310b67;
-  background-color: rgb(179, 29, 29);
+  border: 1px solid #000;
+  color: #000000;
+  background-color: #540bbb64;
   cursor: pointer;
   transition: .8s;
 }
 .btn-edit{
-  position: absolute;
+  position: relative;
+  left: 90px;
   bottom: 6px;
   right: 1.6rem;
   font-size: 20px;
   padding: 7px 8px;
   border-radius: 5px;
-  color: #e0dde5;
-  background-color: green;
+  color: #ffffff;
+  background-color: #0ba80b;
   cursor: pointer;
   transition: .4s;
 }
@@ -133,7 +147,7 @@
 }
 
 .btn-delete{
-  background-color: #3a2657;
+  background-color: #a98ed2;
   color: #fff;
   padding: 8px 12px;
   font-weight: bold;
@@ -143,7 +157,7 @@
   top: 90%;
   right: 2rem;
   cursor: pointer;
-  box-shadow: 0 0 12px rgb(88, 86, 86);
+  box-shadow: 0 0 12px #585656;
   transition: .5s;
 }
 .btn-delete:hover{

@@ -5,7 +5,7 @@ import '../../../assets/css/LoadingDelete.css'
 function LoadingDelete() {
   return (
     <div className='loading-Delete'>
-      <h1>Eliminando...</h1>
+      <h1>Deleting data...</h1>
     </div>
   );
 }
