@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+  background-image: url('../img/geracao-leads-wordpress-2.png');
+}
+.CrudAppUsers{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}

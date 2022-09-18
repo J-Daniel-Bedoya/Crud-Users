@@ -1,0 +1,10 @@
+.loading-add{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(20, 135, 66, 0.496);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: #fff;
+}
