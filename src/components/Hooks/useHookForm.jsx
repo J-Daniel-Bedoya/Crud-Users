@@ -5,6 +5,8 @@ import UsersForm from '../elements/UsersForm';
 import '../../assets/css/AlertClass.css'
 
 const useHookForm = () => {
+  //API Rest
+  const apiUsers = "https://api-crud-users-production.up.railway.app/api/v1";
   // Estados
   const [userFormActive, setUserFormActive] = useState(false)
   const [showInfoCard, setShowInfoCard] = useState([])
@@ -22,7 +24,7 @@ const useHookForm = () => {
   }
   // respuesta de la api al inicio
   useEffect(() => {
-    axios.get('https://users-crud1.herokuapp.com/users/')
+    axios.get(`${apiUsers}/users`)
     .then(res => {
       setShowInfoCard(res.data)
     })
@@ -30,7 +32,7 @@ const useHookForm = () => {
   }, [])
   // Ayuda a actualizar la pagina sin necesidad de recargar
   const getUser = () =>{
-    axios.get('https://users-crud1.herokuapp.com/users/')
+    axios.get(`${apiUsers}/users`)
     .then(res => {
       setShowInfoCard(res.data)
     })
@@ -38,7 +40,7 @@ const useHookForm = () => {
   // Función para agregar un nuevo usuario
   const addNewUser = (newUser) => {
     loadingAddUser()
-    axios.post('https://users-crud1.herokuapp.com/users/', newUser)
+    axios.post(`${apiUsers}/users`, newUser)
     .then(() => {
       getUser()
       sucess()
@@ -66,7 +68,7 @@ const useHookForm = () => {
   // Función para editar la información de un usuario
   const userFormEdit = (userEdit) =>{
     loadingAddUser()
-    axios.put(`https://users-crud1.herokuapp.com/users/${userEdit.id}/`, userEdit)
+    axios.patch(`${apiUsers}/users/${userEdit.id}/`, userEdit)
     .then(() => {
       getUser()
       sucessUpdate()
@@ -90,7 +92,7 @@ const useHookForm = () => {
   // Función para elimina una card con información de un usuario
   const deleteUser = (id) => {
     loadingDelet()
-    axios.delete(`https://users-crud1.herokuapp.com/users/${id}/`)
+    axios.delete(`${apiUsers}/users/${id}/`)
     .then(() => {
       getUser()
     })
@@ -120,7 +122,7 @@ const useHookForm = () => {
   const deleteAllUsers = () => {
     loadingDelet()
     showInfoCard.map(e => {
-      axios.delete(`https://users-crud1.herokuapp.com/users/${e.id}/`)
+      axios.delete(`${apiUsers}/users/${e.id}/`)
       .then(() => getUser())
     })
   }

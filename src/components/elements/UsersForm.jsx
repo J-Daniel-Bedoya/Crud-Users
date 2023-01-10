@@ -1,9 +1,9 @@
-import React,  { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import '../../assets/css/UsersForm.css'
 
-const UsersForm = ({userList, addNewUser, infoUser, userFormEdit}) => {
-  const {register, handleSubmit, reset} = useForm()
+const UsersForm = ({ userList, addNewUser, infoUser, userFormEdit }) => {
+  const { register, handleSubmit, reset } = useForm()
 
   useEffect(() => {
     if (infoUser) {
@@ -14,7 +14,7 @@ const UsersForm = ({userList, addNewUser, infoUser, userFormEdit}) => {
     if (infoUser) {
       userFormEdit(form)
       userList()
-    }else{
+    } else {
       addNewUser(form)
       userList()
     }
@@ -24,59 +24,59 @@ const UsersForm = ({userList, addNewUser, infoUser, userFormEdit}) => {
     <div className='form__container'>
       <div className='form'>
         <h2>Add new user</h2>
-        <form onSubmit={handleSubmit(submit)}  className='form-inputs' autoComplete='Off'>
+        <form onSubmit={handleSubmit(submit)} className='form-inputs' autoComplete='Off'>
 
           <div className='form-container-input'>
-            <input 
-              type="text" 
+            <input
+              type="text"
               id='first_name'
               className='input'
               placeholder=' '
-              {...register("first_name")}/>
+              {...register("firstName")} />
             <label htmlFor="first_name" className='label'>First Name</label>
             <span className='input-line'></span>
           </div>
 
           <div className='form-container-input'>
-            <input 
-              type="text" 
+            <input
+              type="text"
               id='last_name'
               className='input'
               placeholder=' '
-              {...register("last_name")}/>
+              {...register("lastName")} />
             <label htmlFor="last_name" className='label'>Last Name</label>
             <span className='input-line'></span>
           </div>
 
           <div className='form-container-input'>
-          <input 
-            type="email" 
-            id='email'
-            className='input'
-            placeholder=' '
-            {...register("email")}/>
-          <label htmlFor="email" className='label'>Email</label>
-          <span className='input-line'></span>
+            <input
+              type="email"
+              id='email'
+              className='input'
+              placeholder=' '
+              {...register("email")} />
+            <label htmlFor="email" className='label'>Email</label>
+            <span className='input-line'></span>
           </div>
 
           <div className='form-container-input'>
-            <input 
-              type="password" 
+            <input
+              type="password"
               id='password'
               className='input'
               placeholder=' '
-              {...register("password")}/>
+              {...register("password")} />
             <label htmlFor="password" className='label'>Password</label>
             <span className='input-line'></span>
-          </div> 
+          </div>
 
           <div className='form-container-input'>
-            <input 
-              type="date" 
+            <input
+              type="date"
               id='birthday'
               placeholder=' '
               className='input input-birthday'
-              {...register("birthday")}/>
+              {...register("date")} />
           </div>
 
           <div className='btn__form--cotainer'>
